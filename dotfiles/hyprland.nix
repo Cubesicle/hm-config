@@ -73,6 +73,31 @@
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"
       ];
+      
+      dwindle = {
+        preserve_split = true;
+        smart_split = true;
+      };
+      
+      general = {
+        border_size = 2;
+        "col.active_border" = "$accent";
+        "col.inactive_border" = "$surface0";
+      };
+      
+      group = {
+        "col.border_active" = "$accent";
+        "col.border_inactive" = "$surface0";
+        groupbar = {
+          text_color = "$text";
+          "col.active" = "$accent";
+          "col.inactive" = "$surface0";
+        };
+      };
+      
+      decoration = {
+        rounding = 10;
+      };
     };
   };
 }

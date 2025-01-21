@@ -26,4 +26,17 @@
     flavor = "mocha";
     accent = "mauve";
   };
+  
+  # Hyprland
+  wayland.windowManager.hyprland.settings = {
+    #monitor = [
+    #  "DP-1, 1920x1080@144, 0x0, 1"
+    #  "DP-2, preferred, 1920x180, 1"
+    #  "HDMI-A-1, preferred, -768x-140, auto, transform, 1"
+    #];
+    input = {
+      sensitivity = 0;
+      accel_profile = "flat";     
+    };
+  };
 }
