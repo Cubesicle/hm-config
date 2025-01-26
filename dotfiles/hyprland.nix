@@ -14,9 +14,10 @@ in
       "$terminal" = "kitty";
       "$menu" = "fuzzel";
       "$mainMod" = "SUPER";
+      "$altMod" = "ALT";
 
       bind = [
-        "$mainMod, RETURN, exec, $terminal"
+        "$mainMod, RETURN, exec, $terminal sh -c 'tmux attach -t main || tmux new -s main'"
         "$mainMod, W, killactive"
         "$mainMod, V, togglefloating"
         "$mainMod, S, togglesplit"
@@ -41,10 +42,10 @@ in
         "$mainMod SHIFT, L, movewindow, r"
         "$mainMod SHIFT, K, movewindow, u"
         "$mainMod SHIFT, J, movewindow, d"
-        "$mainMod SHIFT ALT, H, movewindoworgroup, l"
-        "$mainMod SHIFT ALT, L, movewindoworgroup, r"
-        "$mainMod SHIFT ALT, K, movewindoworgroup, u"
-        "$mainMod SHIFT ALT, J, movewindoworgroup, d"
+        "$mainMod SHIFT $altMod, H, movewindoworgroup, l"
+        "$mainMod SHIFT $altMod, L, movewindoworgroup, r"
+        "$mainMod SHIFT $altMod, K, movewindoworgroup, u"
+        "$mainMod SHIFT $altMod, J, movewindoworgroup, d"
 
         "$mainMod, 1, split:workspace, 1"
         "$mainMod, 2, split:workspace, 2"
@@ -94,6 +95,7 @@ in
         "col.border_active" = catp "$accent";
         "col.border_inactive" = catp "$surface0";
         groupbar = {
+          font_family = "JetBrainsMono NF";
           text_color = catp "$text";
           "col.active" = catp "$accent";
           "col.inactive" = catp "$surface0";
@@ -101,6 +103,11 @@ in
       };
 
       decoration.rounding = 10;
+
+      misc = {
+        font_family = "JetBrainsMono NF";
+        splash_font_family = "JetBrainsMono NF";
+      };
     };
   };
 }

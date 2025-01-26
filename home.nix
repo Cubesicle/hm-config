@@ -22,9 +22,8 @@
 
     home.pointerCursor.gtk.enable = true;
     home.pointerCursor.hyprcursor.enable = true;
-    home.pointerCursor.name = "breeze_cursors";
-    home.pointerCursor.package = pkgs.kdePackages.breeze;
-    home.pointerCursor.size = 24;
+    home.pointerCursor.name = "capitaine-cursors";
+    home.pointerCursor.package = pkgs.capitaine-cursors;
     programs.btop.enable = true;
     programs.fuzzel.enable = true;
     programs.helix.enable = true;
@@ -36,6 +35,7 @@
     programs.yazi.enable = true;
     programs.zsh.enable = true;
     services.dunst.enable = true;
+    services.hyprpaper.enable = true;
     wayland.windowManager.hyprland = {
       enable = true;
       package = lib.mkIf config.enableNixGL (config.lib.nixGL.wrap pkgs.hyprland);

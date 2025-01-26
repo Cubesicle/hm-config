@@ -9,7 +9,10 @@ in
 
 {
   programs.fuzzel.settings = lib.mkForce {
-    main.terminal = "kitty";
+    main = {
+      font = "JetBrainsMono NF";
+      terminal = "kitty";
+    };
     border.width = 2;
 
     colors = {
