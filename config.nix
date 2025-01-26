@@ -10,6 +10,7 @@
   # Extra packages
   extraPkgs = with pkgs; [
     #(config.lib.nixGL.wrap firefox)
+    #config.home.pointerCursor.package
   ];
 
   # Set to true if you're using nixpkgs on a non-nixos system

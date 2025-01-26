@@ -7,5 +7,5 @@
     ];
     keyMode = "vi";
     mouse = true;
-  };  
+  };
 }
