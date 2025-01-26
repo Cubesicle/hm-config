@@ -20,14 +20,14 @@
   home.sessionVariables = {
     EDITOR = "hx";
   };
-  
+
   # Catppuccin
   catppuccin = {
     enable = true;
     flavor = "mocha";
     accent = "mauve";
   };
-  
+
   # Hyprland
   wayland.windowManager.hyprland.settings = {
     #monitor = [
@@ -37,7 +37,7 @@
     #];
     input = {
       sensitivity = 0;
-      accel_profile = "flat";     
+      accel_profile = "flat";
     };
   };
 }
