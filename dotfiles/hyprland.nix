@@ -29,7 +29,7 @@ in
         "$mainMod, TAB, changegroupactive, f"
         "$mainMod SHIFT, BRACKETLEFT, movegroupwindow, b"
         "$mainMod SHIFT, BRACKETRIGHT, movegroupwindow, f"
-        "$mainMod SHIFT, S, exec, hyprshot --freeze -m region -o /tmp/screenshots"
+        "$mainMod SHIFT, S, exec, hyprshot -m region --clipboard-only --freeze"
         "$mainMod CTRL, Q, exit"
         "$mainMod, M, exec, $menu"
 
@@ -108,6 +108,8 @@ in
         font_family = "JetBrainsMono NF";
         splash_font_family = "JetBrainsMono NF";
       };
+
+      layerrule = "noanim, selection";
     };
   };
 }
