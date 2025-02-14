@@ -43,8 +43,12 @@
 
     home.packages = if config.noPkgs then
       lib.mkForce ([
+        (pkgs.callPackage <home-manager/home-manager> {})
+        (import <home-manager/docs> {
+          inherit pkgs lib;
+          inherit (config.home.version) release isReleaseBranch;
+        }).manPages
         config.home.sessionVariablesPackage
-        pkgs.home-manager
       ] ++ config.extraPkgs)
     else
       [
