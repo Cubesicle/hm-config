@@ -7,5 +7,6 @@
     ];
     keyMode = "vi";
     mouse = true;
+    extraConfig = "set-option -g detach-on-destroy off";
   };
 }
