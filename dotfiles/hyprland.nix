@@ -1,8 +1,4 @@
-{ config, lib, pkgs, ... }:
-
-let
-  catp = str: lib.mkIf config.catppuccin.hyprland.enable str;
-in
+{ config, pkgs, ... }:
 
 {
   wayland.windowManager.hyprland = {
@@ -69,6 +65,9 @@ in
         "$mainMod SHIFT, 9, split:movetoworkspace, 9"
         "$mainMod SHIFT, 0, split:movetoworkspace, 10"
 
+        "ALT, TAB, exec, hyprswitch gui --mod-key alt_l --key tab --close mod-key-release --reverse-key=mod=shift && hyprswitch dispatch"
+        "ALT SHIFT, TAB, exec, hyprswitch gui --mod-key alt_l --key tab --close mod-key-release --reverse-key=mod=shift && hyprswitch dispatch -r"
+
         "$mainMod, mouse_up, split:workspace, m+1"
         "$mainMod, mouse_down, split:workspace, m-1"
         "$mainMod, mouse_right, focusmonitor, r"
@@ -83,8 +82,8 @@ in
 
       general = {
         border_size = 2;
-        "col.active_border" = catp "$accent";
-        "col.inactive_border" = catp "$surface0";
+        "col.active_border" = "$accent";
+        "col.inactive_border" = "$surface0";
       };
 
       input.mouse_refocus = false;
@@ -92,13 +91,13 @@ in
       dwindle.preserve_split = true;
 
       group = {
-        "col.border_active" = catp "$accent";
-        "col.border_inactive" = catp "$surface0";
+        "col.border_active" = "$accent";
+        "col.border_inactive" = "$surface0";
         groupbar = {
           font_family = "JetBrainsMono NF";
-          text_color = catp "$text";
-          "col.active" = catp "$accent";
-          "col.inactive" = catp "$surface0";
+          text_color = "$text";
+          "col.active" = "$accent";
+          "col.inactive" = "$surface0";
         };
       };
 

@@ -23,13 +23,16 @@
 
   # Catppuccin
   catppuccin = {
-    enable = true;
     flavor = "mocha";
     accent = "mauve";
   };
 
   # Hyprland
   wayland.windowManager.hyprland.settings = {
+    exec-once = [
+      "hyprpm reload -n"
+      "hyprswitch init --custom-css ~/.config/hypr/hyprswitch.css"
+    ];
     #monitor = [
     #  "DP-1, 1920x1080@144, 0x0, 1"
     #  "DP-2, preferred, 1920x180, 1"

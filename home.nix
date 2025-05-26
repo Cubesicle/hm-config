@@ -20,6 +20,7 @@
   config = {
     nixGL.packages = lib.mkIf config.enableNixGL (import <nixgl> { inherit pkgs; });
 
+    catppuccin.enable = true;
     home.pointerCursor.gtk.enable = true;
     home.pointerCursor.hyprcursor.enable = true;
     home.pointerCursor.name = "capitaine-cursors";
@@ -53,6 +54,7 @@
     else
       [
         pkgs.hyprshot
+        pkgs.hyprswitch
         pkgs.nerd-fonts.jetbrains-mono
       ] ++ config.extraPkgs;
 
