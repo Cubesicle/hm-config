@@ -86,8 +86,6 @@
         "col.inactive_border" = "$surface0";
       };
 
-      input.mouse_refocus = false;
-
       dwindle.preserve_split = true;
 
       group = {
