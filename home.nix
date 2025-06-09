@@ -54,7 +54,7 @@
     else
       [
         pkgs.hyprshot
-        pkgs.hyprswitch
+        pkgs.hyprshell
         pkgs.nerd-fonts.jetbrains-mono
       ] ++ config.extraPkgs;
 
